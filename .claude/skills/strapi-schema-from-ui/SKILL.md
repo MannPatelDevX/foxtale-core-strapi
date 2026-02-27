@@ -7,7 +7,7 @@ description: >
 # Strapi Schema from UI / Figma
 
 This skill converts UI/UX context (queries, Figma MCP links, screenshots) into Strapi schemas for the Foxtale project.
-It **must** follow `.cursor/skills/strapi-best-practices/SKILL.md`.
+It **must** follow `.claude/skills/strapi-best-practices/SKILL.md`.
 
 Always assume Strapi is the Foxtale CMS instance described there.
 
@@ -37,7 +37,7 @@ When using this skill, the agent **must**:
 
 1. **Consult Strapi best practices**
 
-   - Read and respect `.cursor/skills/strapi-best-practices/SKILL.md`.
+   - Read and respect `.claude/skills/strapi-best-practices/SKILL.md`.
    - Enforce:
      - Max 2 levels of component nesting.
      - Clear naming (PascalCase for types/components, `snake_case` fields).
@@ -260,4 +260,4 @@ When responding with a proposed schema, use this structure:
 
 ---
 
-Use this skill whenever translating UI mockups, Figma links, or feature briefs into Strapi schema for Foxtale, ensuring close adherence to `.cursor/skills/strapi-best-practices/SKILL.md` and aggressive reuse of existing components.
+Use this skill whenever translating UI mockups, Figma links, or feature briefs into Strapi schema for Foxtale, ensuring close adherence to `.claude/skills/strapi-best-practices/SKILL.md` and aggressive reuse of existing components.
