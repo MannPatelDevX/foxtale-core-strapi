@@ -1,0 +1,52 @@
+{
+  "collectionName": "components_shared_seos",
+  "info": {
+    "displayName": "Seo",
+    "description": "SEO metadata overrides for products, pages and collections."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "robots": {
+      "type": "enumeration",
+      "enum": [
+        "index",
+        "noindex",
+        "follow",
+        "nofollow",
+        "index_follow",
+        "noindex_nofollow"
+      ]
+    },
+    "keywords": {
+      "type": "text"
+    },
+    "canonical_url": {
+      "type": "string"
+    },
+    "author": {
+      "type": "string"
+    },
+    "open_graph": {
+      "type": "json"
+    },
+    "twitter": {
+      "type": "json"
+    },
+    "hide_sitemap": {
+      "type": "boolean",
+      "default": false
+    }
+  }
+}
+

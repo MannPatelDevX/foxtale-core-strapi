@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_product_responsive_images",
+  "info": {
+    "displayName": "ResponsiveImage",
+    "description": "Mobile and desktop image pair for responsive display."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "mobile_image": {
+      "type": "media",
+      "multiple": false
+    },
+    "desktop_image": {
+      "type": "media",
+      "multiple": false
+    }
+  }
+}

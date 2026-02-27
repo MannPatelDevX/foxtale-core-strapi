@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_product_why_thises",
+  "info": {
+    "displayName": "WhyThis",
+    "description": "Why this product section with title, subtitle and rich description."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "text"
+    },
+    "subtitle": {
+      "type": "text"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}
+

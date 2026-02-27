@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_product_listing_cards",
+  "info": {
+    "displayName": "ListingCard",
+    "description": "Content for showing this product as a card on listing pages (collections, search). No price or inventory — use Shopify."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "short_description": {
+      "type": "text",
+      "description": "Brief copy for the card (e.g. one line)"
+    },
+    "offer_code": {
+      "type": "string",
+      "description": "Optional promo code to show on the card"
+    },
+    "tags": {
+      "type": "component",
+      "component": "product.listing-tag",
+      "repeatable": true,
+      "description": "All tags for the card (badges, collection links, labels)"
+    }
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_faqs",
+  "info": {
+    "displayName": "Faqs",
+    "description": "Frequently asked questions section for the product."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.faq-item"
+    }
+  }
+}
+

@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_product_all_about_image_items",
+  "info": {
+    "displayName": "AllAboutImageItem",
+    "description": "Single image with mobile/desktop variants and short description."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "mobile_image": {
+      "type": "media",
+      "multiple": false
+    },
+    "desktop_image": {
+      "type": "media",
+      "multiple": false
+    },
+    "description": {
+      "type": "string"
+    }
+  }
+}

@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_product_direction_of_uses",
+  "info": {
+    "displayName": "Direction Of Use",
+    "description": "Directions of use section for the product."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "default": "Directions of use"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

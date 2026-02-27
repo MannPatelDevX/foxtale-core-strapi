@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_product_how_to_uses",
+  "info": {
+    "displayName": "HowToUse",
+    "description": "Grouped how to use section including directions, ingredients and routine."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "directions_of_use": {
+      "type": "component",
+      "component": "product.direction-of-use",
+      "repeatable": false
+    },
+    "ingredients": {
+      "type": "component",
+      "component": "product.ingredients",
+      "repeatable": false
+    }
+  }
+}
+

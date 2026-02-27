@@ -1,0 +1,62 @@
+{
+  "collectionName": "components_product_details_values",
+  "info": {
+    "displayName": "DetailsValues",
+    "description": "Stylable detail value block with title, colors, image, and rich description."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "title": {
+      "type": "text"
+    },
+    "title_color": {
+      "type": "text"
+    },
+    "background_color": {
+      "type": "text"
+    },
+    "border_color": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "description_image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "display_type": {
+      "type": "enumeration",
+      "default": "DEFAULT",
+      "enum": [
+        "DEFAULT",
+        "STRIP",
+        "TILE"
+      ]
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_product_variant_items",
+  "info": {
+    "displayName": "VariantItem",
+    "description": "Single variant option with label and optional colour/image for PDP selector."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "label": {
+      "type": "string",
+      "description": "Label shown on the variant chip (e.g. 30 ml, Ivory)."
+    },
+    "shopify_option_value": {
+      "type": "string",
+      "description": "Exact Shopify option value to match against (no price or SKU)."
+    },
+    "badge_text": {
+      "type": "string",
+      "description": "Optional badge like New, Bestseller."
+    },
+    "color_hex": {
+      "type": "string",
+      "description": "Hex colour for COLOR_PALETTE swatch (e.g. #FFE4C4)."
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "description": "Optional image swatch or variant visual."
+    }
+  }
+}
+

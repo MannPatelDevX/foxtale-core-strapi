@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_marketing_offers",
+  "info": {
+    "displayName": "Offer",
+    "description": "Offer configuration with items and key."
+  },
+  "options": {},
+  "attributes": {
+    "offer_items": {
+      "type": "component",
+      "component": "marketing.offer-item",
+      "repeatable": true
+    }
+  }
+}

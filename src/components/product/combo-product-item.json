@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_combo_product_items",
+  "info": {
+    "displayName": "ComboProductItem",
+    "description": "Single combo product with description and linked product."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "description": {
+      "type": "text"
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}
+

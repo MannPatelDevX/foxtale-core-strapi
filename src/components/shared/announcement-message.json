@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_shared_announcement_messages",
+  "info": {
+    "displayName": "AnnouncementMessage",
+    "description": "Single announcement bar message with optional link."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "text": {
+      "type": "string",
+      "required": true
+    },
+    "link_url": {
+      "type": "string"
+    }
+  }
+}
+

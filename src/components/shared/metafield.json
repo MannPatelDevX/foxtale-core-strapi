@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_shared_metafields",
+  "info": {
+    "displayName": "Metafield",
+    "description": "Key/value metafield mapping for Shopify or internal flags."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "key": {
+      "type": "string",
+      "required": true
+    },
+    "value": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

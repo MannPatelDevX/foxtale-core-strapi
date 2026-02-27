@@ -1,0 +1,21 @@
+{
+  "collectionName": "components_product_trust_badges",
+  "info": {
+    "displayName": "TrustBadges",
+    "description": "Trust badges section with repeatable badge items."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "badges": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.title-image-color"
+    }
+  }
+}
+

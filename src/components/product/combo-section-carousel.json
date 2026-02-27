@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_product_combo_section_carousels",
+  "info": {
+    "displayName": "ComboSectionCarousel",
+    "description": "Carousel section to highlight a combo product with creative backgrounds."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "show_component": {
+      "type": "boolean",
+      "default": true
+    },
+    "auto_play": {
+      "type": "boolean",
+      "default": true
+    },
+    "interval_ms": {
+      "type": "integer",
+      "default": 3000
+    },
+    "is_endless_carousel": {
+      "type": "boolean",
+      "default": false
+    },
+    "combo_item": {
+      "type": "component",
+      "component": "product.combo-section-carousel-item",
+      "repeatable": false
+    }
+  }
+}
+

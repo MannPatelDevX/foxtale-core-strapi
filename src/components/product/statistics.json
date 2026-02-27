@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_statistics",
+  "info": {
+    "displayName": "Statistics",
+    "description": "Statistics section with title and statistic items."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "statistic_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.statistic-item"
+    }
+  }
+}
+

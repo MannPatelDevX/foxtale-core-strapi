@@ -1,0 +1,25 @@
+{
+  "kind": "collectionType",
+  "collectionName": "collections",
+  "info": {
+    "singularName": "collection",
+    "pluralName": "collections",
+    "displayName": "Collection",
+    "description": "Generic collection entity identified by handle."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "handle": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shoppable_videos": {
+      "type": "component",
+      "component": "shared.shoppable-videos",
+      "repeatable": false
+    }
+  }
+}

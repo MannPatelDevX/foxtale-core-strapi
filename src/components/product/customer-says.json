@@ -1,0 +1,36 @@
+{
+  "collectionName": "components_product_customer_says",
+  "info": {
+    "displayName": "CustomerSays",
+    "description": "Customer testimonials section with title, copy and visual tags."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "string",
+      "default": "What our Customers Say"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "show": {
+      "type": "boolean",
+      "default": true
+    },
+    "tags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.title-image-color"
+    }
+  }
+}
+

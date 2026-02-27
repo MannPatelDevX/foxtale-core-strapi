@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_recommended_products",
+  "info": {
+    "displayName": "RecommendedProducts",
+    "description": "Recommended products section with title and linked products."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "products": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::product.product"
+    }
+  }
+}
+

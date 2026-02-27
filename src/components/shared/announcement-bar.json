@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_shared_announcement_bars",
+  "info": {
+    "displayName": "AnnouncementBar",
+    "description": "Reusable announcement bar with optional autoplay and multiple messages."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "autoplay_interval_ms": {
+      "type": "integer",
+      "default": 0
+    },
+    "is_auto_play": {
+      "type": "boolean",
+      "default": true
+    },
+    "messages": {
+      "type": "component",
+      "component": "shared.announcement-message",
+      "repeatable": true
+    }
+  }
+}
+

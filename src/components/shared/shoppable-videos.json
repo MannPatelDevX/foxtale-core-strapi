@@ -1,0 +1,37 @@
+{
+  "collectionName": "components_shared_shoppable_videos",
+  "info": {
+    "displayName": "ShoppableVideos",
+    "description": "Group of shoppable videos for products and collections (replaces Quinn)."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "videos_type": {
+      "type": "enumeration",
+      "default": "POPOVER",
+      "enum": [
+        "POPOVER",
+        "CAROUSEL",
+        "CAMPAIGN_CAROUSEL"
+      ]
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "items": {
+      "type": "component",
+      "component": "shared.shoppable-video-item",
+      "repeatable": true
+    }
+  }
+}

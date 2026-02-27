@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_additional_informations",
+  "info": {
+    "displayName": "AdditionalInformation",
+    "description": "Additional information section with rich content cards."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "additional_info_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.additional-info-item"
+    }
+  }
+}
+

@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_product_listing_tags",
+  "info": {
+    "displayName": "ListingTag",
+    "description": "Single tag for listing card: label, optional color, image, or collection link."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "string"
+    },
+    "color": {
+      "type": "string",
+      "description": "Hex or color name for styling (e.g. #FF5733)"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": ["images"],
+      "description": "Optional icon or badge image"
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::collection.collection",
+      "description": "Optional link to a collection (e.g. category tag)"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "kind": "collectionType",
+  "collectionName": "coupons",
+  "info": {
+    "singularName": "coupon",
+    "pluralName": "coupons",
+    "displayName": "Coupon",
+    "description": "Coupon entity identified by handle."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "attributes": {
+    "handle": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    }
+  }
+}

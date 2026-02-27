@@ -430,6 +430,243 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
   };
 }
 
+export interface ApiCollectionCollection extends Struct.CollectionTypeSchema {
+  collectionName: 'collections';
+  info: {
+    description: 'Generic collection entity identified by handle.';
+    displayName: 'Collection';
+    pluralName: 'collections';
+    singularName: 'collection';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    handle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::collection.collection'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    shoppable_videos: Schema.Attribute.Component<
+      'shared.shoppable-videos',
+      false
+    >;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiCouponCoupon extends Struct.CollectionTypeSchema {
+  collectionName: 'coupons';
+  info: {
+    description: 'Coupon entity identified by handle.';
+    displayName: 'Coupon';
+    pluralName: 'coupons';
+    singularName: 'coupon';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    handle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::coupon.coupon'
+    > &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiOfferOffer extends Struct.CollectionTypeSchema {
+  collectionName: 'offers';
+  info: {
+    displayName: 'Offer';
+    pluralName: 'offers';
+    singularName: 'offer';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    handle: Schema.Attribute.String & Schema.Attribute.Required;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::offer.offer'> &
+      Schema.Attribute.Private;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiPagePage extends Struct.CollectionTypeSchema {
+  collectionName: 'pages';
+  info: {
+    description: 'Generic page entity identified by handle.';
+    displayName: 'Page';
+    pluralName: 'pages';
+    singularName: 'page';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    handle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<'oneToMany', 'api::page.page'> &
+      Schema.Attribute.Private;
+    products: Schema.Attribute.Relation<'oneToMany', 'api::product.product'>;
+    publishedAt: Schema.Attribute.DateTime;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+  };
+}
+
+export interface ApiProductProduct extends Struct.CollectionTypeSchema {
+  collectionName: 'products';
+  info: {
+    description: 'Foxtale product metadata and business rules keyed by Shopify product.';
+    displayName: 'Product';
+    pluralName: 'products';
+    singularName: 'product';
+  };
+  options: {
+    draftAndPublish: true;
+  };
+  attributes: {
+    additional_information: Schema.Attribute.Component<
+      'product.additional-information',
+      false
+    >;
+    all_about_items: Schema.Attribute.Component<'product.all-about-item', true>;
+    all_about_title: Schema.Attribute.String;
+    announcement_bar: Schema.Attribute.Component<
+      'shared.announcement-bar',
+      false
+    >;
+    benefits: Schema.Attribute.Component<'product.benefits', false>;
+    combo_products: Schema.Attribute.Component<'product.combo-products', false>;
+    combo_section_carousel: Schema.Attribute.Component<
+      'product.combo-section-carousel',
+      false
+    >;
+    createdAt: Schema.Attribute.DateTime;
+    createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    customer_says: Schema.Attribute.Component<'product.customer-says', false>;
+    delivery_channels: Schema.Attribute.Enumeration<
+      ['WEB', 'APP', 'BOTH', 'NONE']
+    > &
+      Schema.Attribute.DefaultTo<'BOTH'>;
+    description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    details_section_description: Schema.Attribute.RichText &
+      Schema.Attribute.CustomField<
+        'plugin::ckeditor5.CKEditor',
+        {
+          preset: 'defaultHtml';
+        }
+      >;
+    details_section_items: Schema.Attribute.Component<
+      'product.details-item',
+      true
+    >;
+    details_section_title: Schema.Attribute.String;
+    faq_video: Schema.Attribute.Component<'product.faq-video', false>;
+    faqs: Schema.Attribute.Component<'product.faqs', false>;
+    how_to_use: Schema.Attribute.Component<'product.how-to-use', false>;
+    is_freebie: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<false>;
+    is_out_of_stock: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    listing_card: Schema.Attribute.Component<'product.listing-card', false>;
+    locale: Schema.Attribute.String & Schema.Attribute.Private;
+    localizations: Schema.Attribute.Relation<
+      'oneToMany',
+      'api::product.product'
+    > &
+      Schema.Attribute.Private;
+    max_order_quantity: Schema.Attribute.Integer;
+    metafields: Schema.Attribute.Component<'shared.metafield', true>;
+    offers: Schema.Attribute.Component<'marketing.offer-item', true>;
+    page_template_name: Schema.Attribute.Relation<
+      'manyToOne',
+      'api::page.page'
+    >;
+    product_collection_name: Schema.Attribute.String;
+    publishedAt: Schema.Attribute.DateTime;
+    recommended_products: Schema.Attribute.Component<
+      'product.recommended-products',
+      false
+    >;
+    related_products: Schema.Attribute.Component<
+      'product.related-products',
+      false
+    >;
+    routine_section: Schema.Attribute.Component<
+      'product.routine-section',
+      false
+    >;
+    seo: Schema.Attribute.Component<'shared.seo', false>;
+    shopify_handle: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    shopify_product_id: Schema.Attribute.String &
+      Schema.Attribute.Required &
+      Schema.Attribute.Unique;
+    shoppable_videos: Schema.Attribute.Component<
+      'shared.shoppable-videos',
+      false
+    >;
+    show_in_search: Schema.Attribute.Boolean & Schema.Attribute.DefaultTo<true>;
+    show_shiprocket: Schema.Attribute.Boolean &
+      Schema.Attribute.DefaultTo<false>;
+    statistics: Schema.Attribute.Component<'product.statistics', false>;
+    subtitle: Schema.Attribute.String;
+    template_type: Schema.Attribute.Enumeration<['OLD', 'DEFAULT', 'REVAMP']> &
+      Schema.Attribute.DefaultTo<'DEFAULT'>;
+    title: Schema.Attribute.String;
+    trust_badges: Schema.Attribute.Component<'product.trust-badges', false>;
+    updatedAt: Schema.Attribute.DateTime;
+    updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
+      Schema.Attribute.Private;
+    variants: Schema.Attribute.Component<'product.variants', false>;
+    why_this: Schema.Attribute.Component<'product.why-this', false>;
+  };
+}
+
 export interface PluginContentReleasesRelease
   extends Struct.CollectionTypeSchema {
   collectionName: 'strapi_releases';
@@ -941,6 +1178,11 @@ declare module '@strapi/strapi' {
       'admin::transfer-token': AdminTransferToken;
       'admin::transfer-token-permission': AdminTransferTokenPermission;
       'admin::user': AdminUser;
+      'api::collection.collection': ApiCollectionCollection;
+      'api::coupon.coupon': ApiCouponCoupon;
+      'api::offer.offer': ApiOfferOffer;
+      'api::page.page': ApiPagePage;
+      'api::product.product': ApiProductProduct;
       'plugin::content-releases.release': PluginContentReleasesRelease;
       'plugin::content-releases.release-action': PluginContentReleasesReleaseAction;
       'plugin::i18n.locale': PluginI18NLocale;

@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_product_combo_section_carousel_items",
+  "info": {
+    "displayName": "ComboSectionCarouselItem",
+    "description": "Single combo item configuration for the carousel (product + creative + labels)."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "creative": {
+      "type": "component",
+      "component": "product.all-about-image-item",
+      "repeatable": true
+    },
+    "products_label": {
+      "type": "string",
+      "description": "Short label listing combo products (e.g. Product A + Product B)."
+    },
+    "offer_label": {
+      "type": "string",
+      "description": "Offer copy shown with the combo (e.g. Save 20%)."
+    },
+    "is_visible": {
+      "type": "boolean",
+      "default": true
+    },
+    "product": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::product.product"
+    }
+  }
+}
+

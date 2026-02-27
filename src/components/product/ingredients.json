@@ -1,0 +1,31 @@
+{
+  "collectionName": "components_product_ingredients",
+  "info": {
+    "displayName": "Ingredients",
+    "description": "Full ingredient list section for the product."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "default": "Full Ingredient List"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}

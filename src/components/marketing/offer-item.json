@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_marketing_offer_items",
+  "info": {
+    "displayName": "OfferItem",
+    "description": "Individual offer item with code, title, and description."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "offer_code": {
+      "type": "text"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    }
+  }
+}
+

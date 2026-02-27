@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_product_details_items",
+  "info": {
+    "displayName": "DetailsItem",
+    "description": "Single product detail item with icon, rich description, and image."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "details_values": {
+      "type": "component",
+      "component": "product.details-values",
+      "repeatable": true
+    }
+  }
+}

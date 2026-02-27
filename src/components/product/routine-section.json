@@ -1,0 +1,39 @@
+{
+  "collectionName": "components_product_routine_sections",
+  "info": {
+    "displayName": "RoutineSection",
+    "description": "Complete routine section combining routine overview, badge card, and recommended products."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "routine_overview": {
+      "type": "component",
+      "component": "product.routine",
+      "repeatable": false
+    },
+    "routine_badge": {
+      "type": "component",
+      "component": "product.title-image-color",
+      "repeatable": false
+    },
+    "routine_guide": {
+      "type": "component",
+      "component": "product.routine-guide",
+      "repeatable": false
+    },
+    "recommended_products": {
+      "type": "component",
+      "component": "product.recommended-products",
+      "repeatable": false
+    }
+  }
+}
+

@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_benefits",
+  "info": {
+    "displayName": "Benefits",
+    "description": "Benefits section with title and benefit items."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "benefit_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.benefit-item"
+    }
+  }
+}
+

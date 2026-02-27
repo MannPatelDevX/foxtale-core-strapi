@@ -1,0 +1,49 @@
+{
+  "collectionName": "components_product_all_about_items",
+  "info": {
+    "displayName": "AllAboutItem",
+    "description": "All about section item with images, before/after/separator and copy."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "images": {
+      "type": "component",
+      "component": "product.all-about-image-item",
+      "repeatable": true
+    },
+    "before_image": {
+      "type": "component",
+      "component": "product.responsive-image",
+      "repeatable": false
+    },
+    "after_image": {
+      "type": "component",
+      "component": "product.responsive-image",
+      "repeatable": false
+    },
+    "separator_image": {
+      "type": "component",
+      "component": "product.responsive-image",
+      "repeatable": false
+    },
+    "tagline": {
+      "type": "string"
+    },
+    "item_tag": {
+      "type": "string"
+    },
+    "item_title": {
+      "type": "string"
+    }
+  }
+}

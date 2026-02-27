@@ -1,0 +1,26 @@
+{
+  "collectionName": "components_product_title_image_colors",
+  "info": {
+    "displayName": "TitleImageColor",
+    "description": "Trust badge item with title, color and image."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "text"
+    },
+    "title_color": {
+      "type": "text"
+    },
+    "image": {
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
+

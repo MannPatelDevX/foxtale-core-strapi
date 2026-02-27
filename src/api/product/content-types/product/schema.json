@@ -1,0 +1,210 @@
+{
+  "kind": "collectionType",
+  "collectionName": "products",
+  "info": {
+    "singularName": "product",
+    "pluralName": "products",
+    "displayName": "Product",
+    "description": "Foxtale product metadata and business rules keyed by Shopify product."
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "default": "BOTH",
+      "enum": [
+        "WEB",
+        "APP",
+        "BOTH",
+        "NONE"
+      ]
+    },
+    "shopify_handle": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "shopify_product_id": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "title": {
+      "type": "string"
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "max_order_quantity": {
+      "type": "integer"
+    },
+    "is_out_of_stock": {
+      "type": "boolean",
+      "default": false
+    },
+    "page_template_name": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::page.page",
+      "inversedBy": "products"
+    },
+    "details_section_title": {
+      "type": "string"
+    },
+    "details_section_description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "details_section_items": {
+      "type": "component",
+      "component": "product.details-item",
+      "repeatable": true
+    },
+    "offers": {
+      "type": "component",
+      "component": "marketing.offer-item",
+      "repeatable": true
+    },
+    "trust_badges": {
+      "type": "component",
+      "component": "product.trust-badges",
+      "repeatable": false
+    },
+    "why_this": {
+      "type": "component",
+      "component": "product.why-this",
+      "repeatable": false
+    },
+    "related_products": {
+      "type": "component",
+      "component": "product.related-products",
+      "repeatable": false
+    },
+    "all_about_title": {
+      "type": "string"
+    },
+    "all_about_items": {
+      "type": "component",
+      "component": "product.all-about-item",
+      "repeatable": true
+    },
+    "benefits": {
+      "type": "component",
+      "component": "product.benefits",
+      "repeatable": false
+    },
+    "statistics": {
+      "type": "component",
+      "component": "product.statistics",
+      "repeatable": false
+    },
+    "customer_says": {
+      "type": "component",
+      "component": "product.customer-says",
+      "repeatable": false
+    },
+    "faqs": {
+      "type": "component",
+      "component": "product.faqs",
+      "repeatable": false
+    },
+    "additional_information": {
+      "type": "component",
+      "component": "product.additional-information",
+      "repeatable": false
+    },
+    "how_to_use": {
+      "type": "component",
+      "component": "product.how-to-use",
+      "repeatable": false
+    },
+    "routine_section": {
+      "type": "component",
+      "component": "product.routine-section",
+      "repeatable": false
+    },
+    "faq_video": {
+      "type": "component",
+      "component": "product.faq-video",
+      "repeatable": false
+    },
+    "combo_products": {
+      "type": "component",
+      "component": "product.combo-products",
+      "repeatable": false
+    },
+    "combo_section_carousel": {
+      "type": "component",
+      "component": "product.combo-section-carousel",
+      "repeatable": false
+    },
+    "listing_card": {
+      "type": "component",
+      "component": "product.listing-card",
+      "repeatable": false
+    },
+    "variants": {
+      "type": "component",
+      "component": "product.variants",
+      "repeatable": false
+    },
+    "shoppable_videos": {
+      "type": "component",
+      "component": "shared.shoppable-videos",
+      "repeatable": false
+    },
+    "metafields": {
+      "type": "component",
+      "component": "shared.metafield",
+      "repeatable": true
+    },
+    "announcement_bar": {
+      "type": "component",
+      "component": "shared.announcement-bar",
+      "repeatable": false
+    },
+    "show_in_search": {
+      "type": "boolean",
+      "default": true
+    },
+    "is_freebie": {
+      "type": "boolean",
+      "default": false
+    },
+    "recommended_products": {
+      "type": "component",
+      "component": "product.recommended-products",
+      "repeatable": false
+    },
+    "seo": {
+      "type": "component",
+      "component": "shared.seo",
+      "repeatable": false
+    },
+    "show_shiprocket": {
+      "type": "boolean",
+      "default": false
+    },
+    "product_collection_name": {
+      "type": "string"
+    },
+    "template_type": {
+      "type": "enumeration",
+      "enum": ["OLD", "DEFAULT", "REVAMP"],
+      "default": "DEFAULT"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "collectionName": "components_product_faq_items",
+  "info": {
+    "displayName": "FaqItem",
+    "description": "Single frequently asked question with rich answer."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "question": {
+      "type": "string",
+      "required": true
+    },
+    "answer": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    }
+  }
+}
+

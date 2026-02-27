@@ -1,0 +1,20 @@
+{
+  "collectionName": "components_product_routine_cards",
+  "info": {
+    "displayName": "RoutineCard",
+    "description": "Routine card section with a single title, image and color card."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "card": {
+      "type": "component",
+      "component": "product.title-image-color",
+      "repeatable": false
+    }
+  }
+}

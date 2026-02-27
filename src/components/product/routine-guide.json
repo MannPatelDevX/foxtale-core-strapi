@@ -1,0 +1,30 @@
+{
+  "collectionName": "components_product_routine_guides",
+  "info": {
+    "displayName": "RoutineGuide",
+    "description": "Usage guide for the routine with optional media and rich-text steps."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "media": {
+      "type": "media",
+      "multiple": false
+    }
+  }
+}
+

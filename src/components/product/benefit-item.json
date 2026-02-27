@@ -1,0 +1,29 @@
+{
+  "collectionName": "components_product_benefit_items",
+  "info": {
+    "displayName": "BenefitItem",
+    "description": "Single benefit with title, description and optional icon."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "text"
+    },
+    "description": {
+      "type": "text"
+    },
+    "icon": {
+      "type": "media",
+      "multiple": false,
+      "allowedTypes": [
+        "images"
+      ]
+    }
+  }
+}
+

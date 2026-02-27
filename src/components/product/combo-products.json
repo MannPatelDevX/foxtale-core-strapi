@@ -1,0 +1,24 @@
+{
+  "collectionName": "components_product_combo_products",
+  "info": {
+    "displayName": "ComboProducts",
+    "description": "Combo products section with title and linked products."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "section_title": {
+      "type": "string"
+    },
+    "combo_product_items": {
+      "type": "component",
+      "repeatable": true,
+      "component": "product.combo-product-item"
+    }
+  }
+}
+

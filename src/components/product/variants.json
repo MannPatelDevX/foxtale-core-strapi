@@ -1,0 +1,38 @@
+{
+  "collectionName": "components_product_variants",
+  "info": {
+    "displayName": "Variants",
+    "description": "Variant configuration for PDP selector (size or colour palette)."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "variant_type": {
+      "type": "enumeration",
+      "enum": ["SIZE", "COLOR_PALETTE"],
+      "default": "SIZE"
+    },
+    "option_name": {
+      "type": "string",
+      "description": "Shopify option name this controls (e.g. Size, Shade)."
+    },
+    "pdp_title": {
+      "type": "string",
+      "description": "Section title shown above the variant selector."
+    },
+    "pdp_subtitle": {
+      "type": "string",
+      "description": "Optional helper text below the title."
+    },
+    "variant_items": {
+      "type": "component",
+      "component": "product.variant-item",
+      "repeatable": true
+    }
+  }
+}
+

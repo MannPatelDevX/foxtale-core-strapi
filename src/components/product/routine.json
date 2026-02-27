@@ -1,0 +1,34 @@
+{
+  "collectionName": "components_product_routines",
+  "info": {
+    "displayName": "Routine",
+    "description": "Complete routine section linked to a collection."
+  },
+  "options": {},
+  "attributes": {
+    "delivery_channels": {
+      "type": "enumeration",
+      "enum": ["WEB", "APP", "BOTH", "NONE"],
+      "default": "BOTH"
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "customField",
+      "customField": "plugin::ckeditor5.CKEditor",
+      "options": {
+        "preset": "defaultHtml"
+      }
+    },
+    "collection": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::collection.collection"
+    },
+    "show": {
+      "type": "boolean",
+      "default": true
+    }
+  }
+}
